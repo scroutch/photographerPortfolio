@@ -1,3 +1,7 @@
+<?php
+require '../models/bdd.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +13,23 @@
     <title>Oliver Doe</title>
 </head>
 <body>
-    <h1>OKAY</h1>
+<?php
+    include('../views/header.php');
+
+    if (isset($_GET['page'])) {
+        $page = $_GET['page'];
+        if ($page == 1) {
+            include('../views/home.php');
+        } else if ($page == 2) {
+            include('../views/call.php');
+        } else if ($page == 3) {
+            include('../views/connexion.php');
+        }
+    } else {
+        include('../views/home.php');
+    }
+
+    include('../views/footer.php');
+    ?>
 </body>
 </html>
