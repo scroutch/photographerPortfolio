@@ -11,16 +11,25 @@
     --text-font: 'Open Sans', sans-serif;
 }
 
+h1 {
+    font-family: var(--title-font);
+    font-size: 50px;
+}
+
+h2 {
+    font-family: var(--title-font);
+    font-size: 40px;
+}
 
 header {
-    background: center no-repeat url("../img/header_img.jpg");
+    background: center/100% no-repeat url("../img/header_img.jpg");
     width: 100%;
     height: 100vh;
     
 }
 
 header ul {
-    width: 30%;
+    width: 20%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -29,10 +38,35 @@ header ul {
     font-family: var(--text-font);
     font-weight: 600;
     font-size: var(--title-size);
-    color: var(--white);
+    color: var(--main-color);
     cursor: pointer;
 }
 
 header ul li:hover {
-    color: var(--main-color);
+    color: var(--btn-color);
+}
+
+header #presentation {
+    height: 300px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 15rem;
+    margin-left: 10rem;
+}
+
+header #presentation button {
+    width: 430px;
+    height: 100px;
+    text-transform: uppercase;
+    color: var(--white);
+    background-color: var(--btn-color);
+    border: none;
+    font-size: var(--title-size);
+}
+
+header #presentation button:hover {
+    cursor: pointer;
+    background-color: var(--main-color);
 }
