@@ -9,7 +9,7 @@ if (
 ) {
     $email = htmlspecialchars($_POST['email']);
     $password = $_POST['password'];
-    $table = "membre";
+    $table = "user";
     $result = connectMember($bdd, $table, $email);
 
     if (!empty($result)) {
@@ -21,10 +21,10 @@ if (
             }
         } else {
             $_SESSION['errorMess'] = '<div class="alert alert-danger text-center" role="alert"><i class="fa-solid fa-triangle-exclamation me-3"></i>Votre mot de passe est mauvais.</div>';
-            header('Location= ../public/index.php?page=3');
+            header('Location: ../public/index.php?page=3');
         }
     } else {
-        $_SESSION['errorMess'] = '<div class="alert alert-success text-center" role="alert"><i class="fa-solid fa-triangle-exclamation me-3"></i>Votre email est mauvais.</div>';
-        header('Location= ../public/index.php?page=3');
+        $_SESSION['errorMess'] = '<div class="alert alert-danger text-center" role="alert"><i class="fa-solid fa-triangle-exclamation me-3"></i>Votre email est mauvais.</div>';
+        header('Location: ../public/index.php?page=3');
     }
 }
