@@ -13,6 +13,14 @@ require '../../models/bdd.php';
     <title>Panel admin</title>
 </head>
 <body>
+<div class="row">
+        <?php
+        if (isset($_SESSION['errorMess'])) {
+            echo $_SESSION['errorMess'];
+            unset($_SESSION['errorMess']);
+        }
+        ?>
+</div>
 <?php
     include('../views/header.php');
 
@@ -21,7 +29,7 @@ require '../../models/bdd.php';
         if ($page == 1) {
             include('../views/home.php');
         } else if ($page == 2) {
-            include('../views/call.php');
+            include('../views/formAjout.php');
         } else if ($page == 3) {
             include('../views/connexion.php');
         }
