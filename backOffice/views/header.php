@@ -1,0 +1,1 @@
+<h1>PAnel admin header</h1>
