@@ -11,6 +11,10 @@
     --text-font: 'Open Sans', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 h1 {
     font-family: var(--title-font);
     font-size: 50px;
@@ -42,7 +46,11 @@ header ul {
     cursor: pointer;
 }
 
-header ul li:hover {
+a:visited {
+    color: var(--main-color);
+}
+
+header ul li:hover, header ul li a:hover {
     color: var(--btn-color);
 }
 

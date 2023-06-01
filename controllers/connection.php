@@ -9,7 +9,7 @@ if (
 ) {
     $email = htmlspecialchars($_POST['email']);
     $password = $_POST['password'];
-    $table = "user";
+    $table = "admin";
     $result = connectMember($bdd, $table, $email);
 
     if (!empty($result)) {

@@ -1,11 +1,9 @@
 <?php
 
-function ajoutImg($bdd, $table, $picture, $user_id) {
-    $query = "INSERT INTO $table (name) VALUES (:name) where user_id = :user_id";
+function ajoutImg($bdd, $table, $picture) {
+    $query = "INSERT INTO $table (image) VALUES (:image)";
     $req = $bdd->prepare($query);
-    $req = $bdd->prepare($query);
-    $req->bindValue(':name', $picture, PDO::PARAM_STR);
-    $req->bindValue(':user_id', $user_id, PDO::PARAM_INT);
+    $req->bindValue(':image', $picture, PDO::PARAM_STR);
     $req->execute();
 }
 
@@ -16,5 +14,11 @@ function delete($bdd, $table, $id)
     $sql = "DELETE FROM $table WHERE id=:id";
     $query = $bdd->prepare($sql);
     $query->bindValue(':id', $id, PDO::PARAM_INT);
+    $query->execute();
+}
+
+function listPhoto($bdd, $table) {
+    $sql = "SELECT * FROM $table";
+    $query = $bdd->prepare($sql);
     $query->execute();
 }
