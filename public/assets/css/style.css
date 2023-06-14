@@ -13,6 +13,7 @@
 
 a {
     text-decoration: none;
+    color: var(--main-color);
 }
 
 h1 {
@@ -20,9 +21,19 @@ h1 {
     font-size: 50px;
 }
 
-h2 {
+h2, .title-section {
     font-family: var(--title-font);
     font-size: 40px;
+}
+
+p {
+    text-align: justify;
+}
+
+.title-section {
+    text-transform: uppercase;
+    line-height: 5;
+    text-align: center;
 }
 
 header {
@@ -32,7 +43,7 @@ header {
     
 }
 
-header ul {
+header ul, footer ul {
     width: 20%;
     display: flex;
     justify-content: space-around;
@@ -50,7 +61,7 @@ a:visited {
     color: var(--main-color);
 }
 
-header ul li:hover, header ul li a:hover {
+header ul li:hover, header ul li a:hover, footer ul li:hover, footer ul li a:hover {
     color: var(--btn-color);
 }
 
@@ -77,4 +88,235 @@ header #presentation button {
 header #presentation button:hover {
     cursor: pointer;
     background-color: var(--main-color);
+}
+
+section {
+    width: 55%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#parts {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 1200px;
+}
+
+#parts #part1, #parts #part2, #parts #part3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 1200px;
+}
+
+#parts #part1 img {
+    max-width: 99%;
+}
+
+#parts #part3 img {
+    max-width: 95%;
+}
+
+#parts #part2 img {
+    max-width: 85%;
+    
+}
+
+.button-link {
+    text-transform: uppercase;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    font-size: var(--title-size);
+    padding: 2rem 4rem;
+    margin-top: 2.5rem;
+}
+
+.choose {
+    text-transform: uppercase;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    font-size: var(--title-size);
+    padding: 1rem 2rem;
+}
+
+#aboutMe #content {
+    position: relative;
+    margin-bottom: 8rem;
+}
+
+#aboutMe #content p {
+    font-size: var(--text-size);
+    font-family: var(--text-font);
+    color: var(--main-color);
+    line-height: 2;
+}
+
+#content .textImg {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#content .textImg img {
+    max-width: 50%;
+    margin-left: 1rem;
+}
+
+#content .content-img {
+    max-width: 60%;
+    position: absolute;
+    margin-top: -28rem;
+    
+}
+
+#tarifs-parts {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#tarifs-parts-part {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 400px;
+    border: 1px solid var(--main-color);
+    margin-bottom: 3rem;
+}
+
+#tarifs-parts-part h3 {
+    text-transform: uppercase;
+    font-family: var(--title-font);
+    font-size: var(--title-size);
+}
+
+.text-bloc {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+#question {
+    height: 800px;
+    background: center/100% no-repeat url("../img/happy-groom-holding-bride-countryside.jpg");
+}
+
+#question .form {
+    width: 50%;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-left: -25rem;
+}
+
+#question form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    justify-content: space-around;
+}
+
+#question form input::placeholder, #question form textarea {
+    text-transform: capitalize;
+    font-family: var(--text-font);
+    font-size: var(--text-size);
+    color: var(--main-color);
+}
+
+#question form button {
+    color: var(--white);
+    background-color: var(--main-color);
+    font-size: var(--title-size);
+    font-family: var(--text-font);
+    width: 50%;
+    height: 75px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    border: none;
+}
+
+#question form input, #question form textarea {
+    border: 3px solid var(--main-color);
+}
+
+#question form input:focus {
+    border: 2px solid var(--btn-color);
+    outline-color: var(--btn-color)
+}
+
+#contact {
+    margin-bottom: 10rem;
+}
+
+#contact-parts {
+    display: flex;
+    color: var(--main-color);
+}
+
+#contact-part1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#contact-part1 img:first-child {
+    width: 80%;
+}
+
+#contact-part1 img:last-child {
+    width: 65%;
+    position: absolute;
+    margin-top: 4rem;
+    height: 370px;
+}
+
+#contact-part2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: var(--title-size);
+    font-family: var(--text-font);
+}
+
+#contact-part2 h3 {
+    font-size: 2.8rem;
+    font-family: var(--text-font);
+}
+
+#contact-part2-para {
+    width: 35%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#contact-part2-para i {
+    padding-right: 1rem;
+}
+
+footer {
+    background: center/100% no-repeat url("../img/belle-couple-album-photo-de-mariage-original-noir-et-blanc-coucher-du-soleil.jpg");
+    width: 100%;
+    height: 100vh;  
+}
+
+footer ul {
+    width: 50%;
+    height: 300px;
+    text-transform: uppercase;
+    font-size: 2.3rem;
 }
